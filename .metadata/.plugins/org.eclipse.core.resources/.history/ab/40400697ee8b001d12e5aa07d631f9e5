@@ -1,0 +1,72 @@
+package com.liferay.add.custom.portlet;
+
+import com.liferay.add.custom.constants.AddCustomPortletKeys;
+import com.liferay.expando.kernel.model.ExpandoColumn;
+import com.liferay.expando.kernel.model.ExpandoTable;
+import com.liferay.expando.kernel.model.ExpandoTableConstants;
+import com.liferay.expando.kernel.service.ExpandoColumnLocalServiceUtil;
+import com.liferay.expando.kernel.service.ExpandoTableLocalServiceUtil;
+import com.liferay.expando.kernel.service.ExpandoValueLocalServiceUtil;
+import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.model.User;
+import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
+import com.liferay.portal.kernel.service.ClassNameLocalServiceUtil;
+import com.liferay.portal.kernel.theme.ThemeDisplay;
+import com.liferay.portal.kernel.util.ParamUtil;
+import com.liferay.portal.kernel.util.WebKeys;
+
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
+import javax.portlet.Portlet;
+
+import org.osgi.service.component.annotations.Component;
+
+/**
+ * @author Admin
+ */
+@Component(
+	immediate = true,
+	property = {
+		"com.liferay.portlet.display-category=category.sample",
+		"com.liferay.portlet.header-portlet-css=/css/main.css",
+		"com.liferay.portlet.instanceable=true",
+		"javax.portlet.display-name=AddCustom",
+		"javax.portlet.init-param.template-path=/",
+		"javax.portlet.init-param.view-template=/view.jsp",
+		"javax.portlet.name=" + AddCustomPortletKeys.ADDCUSTOM,
+		"javax.portlet.resource-bundle=content.Language",
+		"javax.portlet.security-role-ref=power-user,user"
+	},
+	service = Portlet.class
+)
+public class AddCustomPortlet extends MVCPortlet {
+	public static void addPanNumber(ActionRequest actionRequest,ActionResponse actionResponse) throws PortalException {
+
+		System.out.println("reaching backed");
+	String panNumber=ParamUtil.getString(actionRequest, "panNumber");
+	
+	ThemeDisplay themeDisplay = (ThemeDisplay)actionRequest.getAttribute(WebKeys.THEME_DISPLAY);
+	long companyId=themeDisplay.getCompanyId();
+	long classNameId = ClassNameLocalServiceUtil.getClassNameId(User.getClass().getName());
+	 
+	System.out.println(themeDisplay.getCompanyId()+"        "+classNameId+"    "+ExpandoTableConstants.DEFAULT_TABLE_NAME);
+//	
+//	ExpandoTable expandoTable = ExpandoTableLocalServiceUtil.getTable(themeDisplay.getCompanyId(), AddCustomPortlet.class.getName(), "MyUser");
+//	ExpandoColumn expandoColumn =  ExpandoColumnLocalServiceUtil.getColumn(themeDisplay.getCompanyId(), AddCustomPortlet.class.getName(), expandoTable.getName(), "MyUserColumn");
+//
+//	long classNameId = ClassNameLocalServiceUtil.getClassNameId(themeDisplay.getUser().getClass().getName());
+//	ExpandoValueLocalServiceUtil.addValue(classNameId, expandoTable.getTableId(), expandoColumn.getColumnId(), themeDisplay.getUserId(), "data");
+	
+//	System.out.println();
+	
+	ExpandoTable expandoTable = ExpandoTableLocalServiceUtil.getTable(companyId, classNameId, ExpandoTableConstants.DEFAULT_TABLE_NAME);
+	ExpandoColumn col=ExpandoColumnLocalServiceUtil.getColumn(companyId, classNameId, expandoTable.getName(), "Pan Number");
+	
+	ExpandoValueLocalServiceUtil.addValue(classNameId, expandoTable.getTableId(),col.getColumnId(), themeDisplay.getUserId(), panNumber);
+
+
+	
+	
+	
+}
+}

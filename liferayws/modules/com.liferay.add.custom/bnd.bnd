@@ -1,0 +1,4 @@
+Bundle-Name: com.liferay.add.custom
+Bundle-SymbolicName: com.liferay.add.custom
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.add.custom.constants

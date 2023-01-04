@@ -1,0 +1,4 @@
+Bundle-Name: com.liferay.custom.crud
+Bundle-SymbolicName: com.liferay.custom.crud
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.custom.crud.constants

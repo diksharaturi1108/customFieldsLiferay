@@ -1,0 +1,13 @@
+<%@ include file="/init.jsp" %>
+
+<portlet:renderURL var="viewUserURL">
+	<portlet:param name="mvcPath" value="/view_user.jsp"/>
+</portlet:renderURL>
+<portlet:renderURL var="editUserURL">
+	<portlet:param name="mvcPath" value="/edit_user.jsp"/>
+</portlet:renderURL>
+
+<aui:input type="text" name="userName" label="Logged In User" value="${userNameURL}" readonly="true"/>
+
+<a href="<%=viewUserURL%>"><button>View Pan</button></a>
+<a href="<%=editUserURL%>"><button>Edit Pan</button></a>

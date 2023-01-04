@@ -1,0 +1,19 @@
+<%@ include file="/init.jsp" %>
+
+<portlet:renderURL var="viewUserURL">
+	<portlet:param name="userId" value="${userIdURL}"/>
+	<portlet:param name="mvcPath" value="/view_user.jsp"/>
+</portlet:renderURL>
+
+<aui:input type="text" name="userName" label="User Name" value="${userNameURL}"/>
+
+<a href="<%=viewUserURL%>"><button>View Pan</button></a>
+
+
+<%-- <portlet:actionURL name="addPanNumber" var="addPanNumberURL" />
+<aui:form action="<%=addPanNumberURL%>" name="panCardAddition">
+	<aui:input type="text" name="panNumber" label="Pan Number" value="${panURL}"/>
+		<aui:button-row>
+		<aui:button name="submitButton" type="submit" value="Submit" />
+	</aui:button-row>
+</aui:form> --%>

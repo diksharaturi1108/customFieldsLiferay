@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+D:\new\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\754854644.index
+\com.liferay.custom.crud\src\main\java
+D:\new\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1251894383.index
+\com.liferay.add.custom\src\main\java

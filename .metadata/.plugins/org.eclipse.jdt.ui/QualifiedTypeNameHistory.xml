@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.portlet.ActionRequest"/>
+<fullyQualifiedTypeName name="javax.portlet.ActionResponse"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.ParamUtil"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.theme.ThemeDisplay"/>
+<fullyQualifiedTypeName name="com.liferay.expando.kernel.model.ExpandoTable"/>
+<fullyQualifiedTypeName name="com.liferay.expando.kernel.service.ExpandoTableLocalServiceUtil"/>
+<fullyQualifiedTypeName name="com.liferay.expando.kernel.service.ExpandoColumnLocalServiceUtil"/>
+<fullyQualifiedTypeName name="com.liferay.expando.kernel.model.ExpandoColumn"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.service.ClassNameLocalServiceUtil"/>
+<fullyQualifiedTypeName name="com.liferay.expando.kernel.service.ExpandoValueLocalServiceUtil"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.WebKeys"/>
+</qualifiedTypeNameHistroy>

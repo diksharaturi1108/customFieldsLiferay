@@ -1,0 +1,12 @@
+#
+#Tue Jan 03 23:20:18 IST 2023
+classpath=<?xml version\="1.0" encoding\="UTF-8"?>\n<classpath>\n<classpathentry kind\="lib" path\="C\:/Users/Admin/.gradle/caches/modules-2/files-2.1/com.liferay.portal/release.portal.api/7.3.5-ga6/c606dc509983118668e9aa34f18487fc6f98db3d/release.portal.api-7.3.5-ga6.jar" sourcepath\="C\:/Users/Admin/.gradle/caches/modules-2/files-2.1/com.liferay.portal/release.portal.api/7.3.5-ga6/65902e27d10e0579f402f182af97496e1d72b650/release.portal.api-7.3.5-ga6-sources.jar">\r\n\t<attributes>\r\n\t\t<attribute name\="gradle_used_by_scope" value\=""/>\r\n\t</attributes>\r\n</classpathentry>\r\n</classpath>\n
+buildScriptPath=build.gradle
+linkedResources=
+subprojectPaths=
+managedNatures=org.eclipse.jdt.core.javanature
+hasAutoBuildTasks=false
+gradleVersion=6.6.1
+buildDir=build
+managedBuilders=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><commands/>
+derivedResources=.gradle;build
